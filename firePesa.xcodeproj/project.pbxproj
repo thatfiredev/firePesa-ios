@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		8418B0AF20CFED2E003633C9 /* firePesa.h in Headers */ = {isa = PBXBuildFile; fileRef = 8418B0AD20CFED2D003633C9 /* firePesa.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8418B0B720CFEE03003633C9 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418B0B620CFEE03003633C9 /* Payment.swift */; };
+		8418B0B920CFF1B7003633C9 /* Reversal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418B0B820CFF1B7003633C9 /* Reversal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8418B0AA20CFED2D003633C9 /* firePesa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = firePesa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8418B0AD20CFED2D003633C9 /* firePesa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = firePesa.h; sourceTree = "<group>"; };
 		8418B0AE20CFED2E003633C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8418B0B620CFEE03003633C9 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		8418B0B820CFF1B7003633C9 /* Reversal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reversal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +50,20 @@
 		8418B0AC20CFED2D003633C9 /* firePesa */ = {
 			isa = PBXGroup;
 			children = (
+				8418B0B520CFEDDC003633C9 /* transactions */,
 				8418B0AD20CFED2D003633C9 /* firePesa.h */,
 				8418B0AE20CFED2E003633C9 /* Info.plist */,
 			);
 			path = firePesa;
+			sourceTree = "<group>";
+		};
+		8418B0B520CFEDDC003633C9 /* transactions */ = {
+			isa = PBXGroup;
+			children = (
+				8418B0B620CFEE03003633C9 /* Payment.swift */,
+				8418B0B820CFF1B7003633C9 /* Reversal.swift */,
+			);
+			path = transactions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +109,7 @@
 				TargetAttributes = {
 					8418B0A920CFED2D003633C9 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -130,6 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8418B0B720CFEE03003633C9 /* Payment.swift in Sources */,
+				8418B0B920CFF1B7003633C9 /* Reversal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +276,7 @@
 		8418B0B320CFED2E003633C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -275,6 +293,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = rosariopfernandes.github.io.firePesa;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -283,6 +302,7 @@
 		8418B0B420CFED2E003633C9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
